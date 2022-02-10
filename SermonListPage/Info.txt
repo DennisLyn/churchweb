@@ -1,0 +1,17 @@
+
+1. Install Peter's redirect login
+Upon activation, you need to visit Settings » Login/logout Redirects to setup the plugin.
+
+contributor
+https://chineseforchristchurch.org/ch-sermon/ch-Main.php
+https://chineseforchristchurch.org/ch-sermon/ch-Main.php?Action=logout
+
+2. main entry page:
+https://chineseforchristchurch.org/ch-sermon/ch-Main.php
+https://chineseforchristchurch.org/ch-sermon/ch-Main.php?Action=logout
+
+3. file location on server:
+public_html/ch-sermon
+
+4. Permission:
+ $sudo chmod -R 755 ch-sermon

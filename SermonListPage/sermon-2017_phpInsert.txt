@@ -1,0 +1,79 @@
+﻿[insert_php]
+require_once dirname(__FILE__)."/ch/ch-SermonDAO.php";
+//require_once dirname(__FILE__)."/ch-SermonDAO.php";
+
+$TheSermonApp= new sermonApp;
+$TheYear="2017";
+$TheURL="https://s3-us-west-1.amazonaws.com/chinese-church/restructure_sermon/";
+if (!empty($_GET))
+	{
+		$TheSermonYear=$_GET["SermonYear"];
+		if (isset($TheSermonYear))
+			{
+				$TheSermonList=$TheSermonApp->ListSermonByYear($TheSermonYear);
+			}
+		else
+			{
+				$TheSermonYear=$TheYear;
+				$TheSermonList=$TheSermonApp->ListSermonByYear($TheSermonYear);	
+			}
+	}
+else
+	{
+		$TheSermonYear=$TheYear;
+		$TheSermonList=$TheSermonApp->ListSermonByYear($TheSermonYear);		
+	}
+
+[/insert_php]
+<!--Content Start-->
+[vc_row row_type="row" use_row_as_full_screen_section="no" type="full_width" angled_section="no" text_align="left" background_image_as_pattern="without_pattern" css_animation=""][vc_column][vc_row_inner row_type="row" type="full_width" text_align="left" css_animation=""][vc_column_inner][service_table title="
+<div align=left>
+<a href='https://plus.google.com/+ChineseforChristChurchofHayward' target='blank'><i class='linkIcon' style='display:inline !important'></i><span style='display:inline !important'>主日講道錄影頻道</span></a>
+</div>
+[insert_php]
+echo $TheYear;
+[/insert_php]
+ 講道錄音" title_tag="h2" title_background_type="background_color_type"]
+
+<ul>
+[insert_php]
+	$icounter=0;
+	while($TheSermon = mysqli_fetch_assoc($TheSermonList)) 
+	{
+		echo "<a id='".htmlspecialchars($TheSermon["sermondate"])."'></a>"
+."<li>"
+.htmlspecialchars($TheSermon["sermondate"])
+."&nbsp;";
+if($TheSermon["bibleID"]==0)
+ {
+	echo
+	htmlspecialchars($TheSermon["topic"])
+	."<br/>"
+	.htmlspecialchars($TheSermon["section"])
+	."<br/>";
+ }
+else
+ {
+	echo 
+	htmlspecialchars($TheSermon["topic"])
+	."<br/><a href='http://bible.chineseforchristchurch.org/BibleMobile.php?BibleID=".htmlspecialchars($TheSermon["bibleID"])."#bookMark".htmlspecialchars($TheSermon["bibleID"])."' target=_blank>"
+	.htmlspecialchars($TheSermon["section"])
+	."</a><br/>";
+ }
+ 
+echo htmlspecialchars($TheSermon["speaker"])
+."<br/>"
+."<audio style='width: 80%; min-width:100px' preload='none' controls> <source src='"
+.htmlspecialchars($TheURL)
+.$TheYear
+."/"
+.htmlspecialchars($TheSermon["audiofile"])
+."' type='audio/mpeg'>Your browser does not support the audio element.</audio>"
+."</li>";
+$icounter=$icounter+1;
+	}
+[/insert_php]
+</ul>
+
+[/service_table][/vc_column_inner][/vc_row_inner][/vc_column][/vc_row][vc_row row_type="row" use_row_as_full_screen_section="no" type="grid" angled_section="no" text_align="left" background_image_as_pattern="without_pattern" padding_top="87" padding_bottom="0" css_animation=""][vc_column][vc_column_text]
+<!--// Content End-->

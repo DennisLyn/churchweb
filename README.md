@@ -1,11 +1,12 @@
 # churchweb
-This repo keeps all my works for our church's website - [Chinese For Christ Church of Hayward](https://www.cfcchayward.org/). 
+This repo keeps all independent works (outside of the WordPress works) for our church's website - [Chinese For Christ Church of Hayward](https://www.cfcchayward.org/). 
 
 The website is built by WordPress, MySql and hosted on AWS.
+(Note: WordPress code is not pushed here but backed up on AWS.)
 
-Beside the WordPress templating, I created and implemented: 
+Independent works: 
 1. An Entry page for two websites (Chinese and English sites)
-2. Sermon pages for administrator to create, add, edit, upload, and delete sermon info and videos.
+2. Sermon pages for administrators to create, add, edit, upload, and delete sermon info and videos.
 
 # Folders
 

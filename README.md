@@ -1,15 +1,22 @@
 # churchweb
-This repo keeps all independent works (outside of the WordPress works) for our church's website - [Chinese For Christ Church of Hayward](https://www.cfcchayward.org/). 
+This repo keeps all independent works (outside of the WordPress works and its existing build-in code) for our church's website - [Chinese For Christ Church of Hayward](https://www.cfcchayward.org/). 
 
-The website is built by WordPress, MySql and hosted on AWS.
-(Note: WordPress code is not pushed here but backed up on AWS.)
+Our church website is built by WordPress, MySql database and hosted on AWS. WordPress provides ready-to-use features of login and authentication, members management, and customizable theme which allows us to build and maintain a website easily. (Note: WordPress code is not pushed here but backed up on AWS.)
 
-Independent works: 
-1. An Entry page for two websites (Chinese and English sites)
-2. Sermon pages for administrators to create, edit, and delete sermon info and videos.
+However, WordPress is designed for information posting and management (e.g a blog website) and we still need to create and implement our web pages based on our needs. 
 
-# Folders
+# Independent projects for church websites
 
-1. **[EntryPage](https://github.com/DennisLyn/churchweb/tree/main/EntryPage):**  pure frontend works: HTML, CSS, JS, and images files.
+Here are two new and independent projects I built for our website. 
+1. New Portal Entry page - a new elegant entry page for both Chinese and English websites. This page is built and implemented by HTML, CSS, and JS.
+2. Sermon Management pages - a new flow and pages for administrators to create, update, and delete sermon information and videos. This page is built and implemented by PHP, HTML, CSS, and JS. Data will be fetched and added to our current MySql database.
 
-2. **[SermonListPage](https://github.com/DennisLyn/churchweb/tree/main/SermonListPage):** frontend + backend works: PHP, CSS, JS and data (cvs or xlsx) files.
+# Folder location on the server
+
+public_html/ch-sermon
+
+
+# Project folders on this repo
+
+1. **[EntryPage](https://github.com/DennisLyn/churchweb/tree/main/EntryPage):**  pure frontend works -  HTML, CSS, JS, and images files.
+2. **[SermonListPage](https://github.com/DennisLyn/churchweb/tree/main/SermonListPage):** frontend + backend works -  PHP, CSS, JS and data (cvs or xlsx) files.

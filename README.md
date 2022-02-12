@@ -6,7 +6,7 @@ The website is built by WordPress, MySql and hosted on AWS.
 
 Independent works: 
 1. An Entry page for two websites (Chinese and English sites)
-2. Sermon pages for administrators to create, add, edit, upload, and delete sermon info and videos.
+2. Sermon pages for administrators to create, edit, and delete sermon info and videos.
 
 # Folders
 

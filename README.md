@@ -13,8 +13,8 @@ Here are two new and independent projects I built for our website.
 
 # Folder location on the server
 
+public_html/<br/>
 public_html/ch-sermon
-
 
 # Project folders on this repo
 

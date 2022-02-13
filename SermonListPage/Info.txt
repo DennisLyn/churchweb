@@ -14,4 +14,4 @@ https://chineseforchristchurch.org/ch-sermon/ch-Main.php?Action=logout
 public_html/ch-sermon
 
 4. Permission:
- $sudo chmod -R 755 ch-sermon
+$sudo chmod -R 755 ch-sermon

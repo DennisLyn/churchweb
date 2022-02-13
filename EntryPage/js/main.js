@@ -1,6 +1,6 @@
 (function($) {
   "use strict";
-  // Fit header text to support big screen and small screen
+  // Fit header text to based on the element size
   $("h1").fitText(
     1.2, {
       minFontSize: '30px',
@@ -28,7 +28,7 @@ const colorArray = [
   '255,255,255',
   '150,137,229',
   '180,229,137',
-	'255,255,0'
+  '255,255,0'
 ];
 // For animation time
 let frame = 0;

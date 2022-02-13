@@ -1,6 +1,6 @@
 (function($) {
-  "use strict"; // Start of use strict
-  // Fit Text Plugin for Main Header
+  "use strict";
+  // Fit header text to support big screen and small screen
   $("h1").fitText(
     1.2, {
       minFontSize: '30px',
@@ -13,25 +13,57 @@
       maxFontSize: '50px'
     }
   );
-})(jQuery); // End of use strict
+})(jQuery);
 
+// Initial global values
+// A list for background animated circles
+let circleArray = null;
+// For mouse position
+const mouse = {
+  x: undefined,
+  y: undefined
+};
+// For circle color
+const colorArray = [
+  '255,255,255',
+  '150,137,229',
+  '180,229,137',
+	'255,255,0'
+];
+// For animation time
+let frame = 0;
 // Canvas events
-var canvas = document.querySelector('canvas');
+let canvas = document.querySelector('canvas');
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 c = canvas.getContext('2d');
 
+initCanvas();
+animate();
+
+// Start to draw circles in the canvas
+for (let i = 1; i <= 10; i++) {
+  (function (index) {
+    setTimeout(function () {
+      mouse.x = 100 + i * 10;
+      mouse.y = 100;
+      drawCircles();
+    }, i * 800);
+  })(i);
+}
+
+// Re initiate canvas when window size is changed
 window.addEventListener('resize', function(){
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
   initCanvas();
-})
+});
 
-var mouse = {
-  x: undefined,
-  y: undefined
+function initCanvas() {
+  circleArray = [];
 }
 
+// Circle object for showing animated circles on the background
 function Circle(x, y, radius, vx, vy, rgb, opacity, birth, life){
   this.x = x;
   this.y = y;
@@ -76,20 +108,7 @@ function Circle(x, y, radius, vx, vy, rgb, opacity, birth, life){
   }
 }
 
-var circleArray = [];
-
-function initCanvas() {
-  circleArray = [];
-}
-
-var colorArray = [
-  '255,255,255',
-  '150,137,229',
-  '180,229,137',
-	'255,255,0'
-]
-
-function drawCircles(){
+function drawCircles() {
   for (let i = 0; i < 6; i++) {
     let radius = Math.floor(Math.random() * 20) + 2;
     let vx = (Math.random() * 10) - 1;
@@ -101,7 +120,7 @@ function drawCircles(){
   }
 }
 
-var frame = 0;
+
 function animate() {
   requestAnimationFrame(animate);
   frame += 1;
@@ -109,19 +128,4 @@ function animate() {
   for (let i = 0; i < circleArray.length; i++ ){
     circleArray[i].update();
   }
-}
-
-initCanvas();
-animate();
-// End of Canvas events
-
-// Start to draw circles in the canvas
-for (let i = 1; i <= 10; i++) {
-  (function (index) {
-    setTimeout(function () { 
-      mouse.x = 100 + i * 10;
-      mouse.y = 100;
-      drawCircles();
-    }, i * 800);
-  })(i);
 }

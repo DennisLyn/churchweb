@@ -120,7 +120,6 @@ function drawCircles() {
   }
 }
 
-
 function animate() {
   requestAnimationFrame(animate);
   frame += 1;

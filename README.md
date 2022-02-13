@@ -22,7 +22,7 @@ Here are two new and independent projects I built for our website.
 # Project folders on this repo
 
 1. **[EntryPage](https://github.com/DennisLyn/churchweb/tree/main/EntryPage):**  pure frontend works -  HTML, CSS, JS, and images files.
-2. **[SermonListPage](https://github.com/DennisLyn/churchweb/tree/main/SermonListPage):** frontend + backend works -  PHP, CSS, JS and data (cvs or xlsx) files.
+2. **[SermonListPage](https://github.com/DennisLyn/churchweb/tree/main/SermonListPage):** frontend + backend works -  PHP, CSS, and JS files.
 
 # Wiki pages
 * [New Portal Entry page](New-Portal-Entry-page)

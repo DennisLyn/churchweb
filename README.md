@@ -8,8 +8,8 @@ However, WordPress is designed for information posting and management (e.g a blo
 # Independent projects for church websites
 
 Here are two new and independent projects I built for our website. 
-1. New Portal Entry page - a new elegant entry page for both Chinese and English websites. This page is built and implemented by HTML, CSS, and JS.
-2. Sermon Management pages - a new flow and pages for administrators to create, update, and delete sermon information and videos. This page is built and implemented by PHP, HTML, CSS, and JS. Data will be fetched and added to our current MySql database.
+1. `New Portal Entry page` - a new elegant entry page for both Chinese and English websites. This page is built and implemented by HTML, CSS, and JS.
+2. `Sermon Management pages` - a new flow and pages for administrators to create, update, and delete sermon information and videos. This page is built and implemented by PHP, HTML, CSS, and JS. Data will be fetched and added to our current MySql database.
 
 # Folder location on the server
 

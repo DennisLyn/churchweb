@@ -9,7 +9,7 @@ However, WordPress is designed for information posting (e.g a blog website) and 
 
 Here are two new and independent projects I built for our website.
 1. `New Portal Entry page` - a new elegant entry page for both Chinese and English websites. This page is built and implemented by HTML, CSS, and JS.
-2. `Sermon Management pages` - a new flow and pages for administrators to create, update, and delete sermon information and videos. This page is built and implemented by PHP, HTML, CSS, and JS. Data will be fetched and added to our current MySql database.
+2. `Sermon Management pages` - a new flow and pages for administrators to create, update, and delete sermon information and audios. This page is built and implemented by PHP, HTML, CSS, and JS. Data will be fetched and added to our current MySql database.
 
 # Church websites projects architecture
 <img width="700" alt="Projects flow" src="https://user-images.githubusercontent.com/99282632/153736722-cb3700c9-c6be-4f75-97e7-2c8e286c13b7.png">
